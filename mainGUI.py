@@ -1,12 +1,20 @@
 import PyQt5.QtWidgets as Qtw
 from PyQt5.QtGui import QIcon
-import sys
-import mainBackend
+import os
+from mainBackend import backendClass
 
 # INITIALIZE MAIN WINDOW
 class mainWindow(Qtw.QMainWindow):
 	def __init__(self):
 		super().__init__()
+
+		# INITIALIZING BACKEND
+		self.backend = backendClass()
+
+		if self.backend.userState:
+			pass
+		else:
+			os._exit(0)
 
 		# WINDOW SETTINGS
 		self.setWindowTitle('Remote Desktop Controller')
@@ -72,7 +80,7 @@ class mainWindow(Qtw.QMainWindow):
 		self.userSHPwButton = Qtw.QPushButton('', self)
 		self.userSHPwButton.setGeometry(390, 160, 41, 41)
 		self.userSHPwButton.setStyleSheet(self.SHPwBtnStyleSheet)
-
+		self.userSHPwButton.clicked.connect(self.btnClicked)
 
 
 		# HOST CONTROLL AREA
@@ -129,8 +137,7 @@ class mainWindow(Qtw.QMainWindow):
 
 
 	def btnClicked(self):
-		print('pressed')
-
+		pass
 
 
 application = Qtw.QApplication([])
@@ -139,4 +146,4 @@ application = Qtw.QApplication([])
 window = mainWindow()
 window.show()
 
-sys.exit(application.exec())
+os._exit(application.exec())
