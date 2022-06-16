@@ -16,8 +16,12 @@ class mainWindow(Qtw.QMainWindow):
 
 		# MAIN GRID 
 		self.mainGridUpLabel = Qtw.QLabel(' ', self)
-		self.mainGridUpLabel.setStyleSheet('background-color : #565656; border-radius: 30px;')
-		self.mainGridUpLabel.setGeometry(20, 30, 961, 280)
+		self.mainGridUpLabel.setStyleSheet('background-color : #565656; border-radius: 26px;')
+		self.mainGridUpLabel.setGeometry(20, 30, 961, 260)
+
+		self.mainGridDownLabel = Qtw.QLabel('', self)
+		self.mainGridDownLabel.setStyleSheet('background-color : #565656; border-radius: 26px')
+		self.mainGridDownLabel.setGeometry(20, 310, 961, 161)
 
 		self.labelStyleSheet = """QLabel{
 									background-color : none;
@@ -25,6 +29,9 @@ class mainWindow(Qtw.QMainWindow):
 									color : white;
 								}"""
 
+		self.connectionStatusLabel = Qtw.QLabel(f'Connection Status : {""}', self)
+		self.connectionStatusLabel.setStyleSheet(self.labelStyleSheet)
+		self.connectionStatusLabel.setGeometry(50, 320, 261, 31)
 
 		# USER CONTROLL AREA
 		self.SHPwBtnStyleSheet = """QPushButton{
