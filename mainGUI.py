@@ -30,7 +30,7 @@ class mainWindow(Qtw.QMainWindow):
 		self.SHPwBtnStyleSheet = """QPushButton{
 								background-image: url(Images/main/show2.png);
 								border-radius: 15px;
-								border: 2px  solid;
+								border: 1px  solid;
 								border-color: white;
 								background-color: #3c3c3c;
 								font: 15pt "Questrial";
@@ -45,25 +45,25 @@ class mainWindow(Qtw.QMainWindow):
 								"""
 
 		self.userIdLabel = Qtw.QLabel('', self)
-		self.userIdLabel.setGeometry(40, 80, 291, 41)
+		self.userIdLabel.setGeometry(80, 80, 291, 41)
 		self.userIdLabel.setStyleSheet('border-radius: 15px;')
 
 		self.userIdNameLabel = Qtw.QLabel('', self)
-		self.userIdNameLabel.setGeometry(50, 50, 261, 31)
+		self.userIdNameLabel.setGeometry(90, 50, 261, 31)
 		self.userIdNameLabel.setText('Your ID')
 		self.userIdNameLabel.setStyleSheet(self.labelStyleSheet)
 
 		self.userPwLabel = Qtw.QLabel('', self)
-		self.userPwLabel.setGeometry(40, 160, 291, 41)
+		self.userPwLabel.setGeometry(80, 160, 291, 41)
 		self.userPwLabel.setStyleSheet('border-radius: 15px;')
 
 		self.userPwNameLabel = Qtw.QLabel('', self)
-		self.userPwNameLabel.setGeometry(50, 130, 261, 31)
+		self.userPwNameLabel.setGeometry(90, 130, 261, 31)
 		self.userPwNameLabel.setText('Your Password')
 		self.userPwNameLabel.setStyleSheet(self.labelStyleSheet)
 
 		self.userSHPwButton = Qtw.QPushButton('', self)
-		self.userSHPwButton.setGeometry(350, 160, 41, 41)
+		self.userSHPwButton.setGeometry(390, 160, 41, 41)
 		self.userSHPwButton.setStyleSheet(self.SHPwBtnStyleSheet)
 
 
@@ -71,7 +71,7 @@ class mainWindow(Qtw.QMainWindow):
 		# HOST CONTROLL AREA
 		self.connectButtonStyleSheet = """QPushButton{
 								border-radius: 15px;
-								border: 2px  solid;
+								border: 1px  solid;
 								border-color: white;
 								background-color: #3c3c3c;
 								font: 15pt "Questrial";
